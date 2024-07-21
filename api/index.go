@@ -1,10 +1,16 @@
-package handler
+// api/hello.go
+package main
 
 import (
 	"fmt"
 	"net/http"
 )
 
-func Handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "<h1>Hello from Go!</h1>")
+func handler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello, World!")
+}
+
+func main() {
+	http.HandleFunc("/", handler)
+	http.ListenAndServe(":3000", nil)
 }
