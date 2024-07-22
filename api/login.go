@@ -10,7 +10,7 @@ type User struct {
 	Password string `json:"password"`
 }
 
-func HandlerLogin(writer http.ResponseWriter, request *http.Request) {
+func Login(writer http.ResponseWriter, request *http.Request) {
 	if request.Method != http.MethodPost {
 		http.Error(writer, "Método não permitido", http.StatusMethodNotAllowed)
 		return
