@@ -5,6 +5,6 @@ import (
 	"net/http"
 )
 
-func testPing(writer http.ResponseWriter, r *http.Request) {
+func TestPing(writer http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(writer, "Realize seu ping com o method GET!")
 }
